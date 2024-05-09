@@ -1,7 +1,10 @@
 import { Shipment, ShipmentInput } from './models'
-import { Order, OrderInput } from './zod-models'
+import { Order, OrderInput, CreatableOrderSchema } from './zod-models'
 
 export const createOrder = async (input: OrderInput): Promise<Order> => {
+  // @todo in using effects, don't we still need to use a Either/Result type to handle errors?
+  CreatableOrderSchema.parse(input)
+
   // generate random id
   // @todo add seed
   const id = Math.random().toString(36).substring(7)

@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "tsx": "^4.9.3"
+  },
+  "dependencies": {
+    "effect": "^3.1.3"
   }
 }

@@ -1,4 +1,5 @@
-import { Order, OrderInput, Shipment, ShipmentInput } from './models'
+import { Shipment, ShipmentInput } from './models'
+import { Order, OrderInput } from './zod-models'
 
 export const createOrder = async (input: OrderInput): Promise<Order> => {
   // generate random id
